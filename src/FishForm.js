@@ -9,12 +9,13 @@ const FishForm = () => {
     Length3: "",
     Height: "",
     Width: "",
+    Species: "",
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const [species, setspecies] = useState("");
+
   const handleSubmit = async (e) => {
     console.log(formData);
     e.preventDefault();
@@ -28,7 +29,6 @@ const FishForm = () => {
       });
       const data = await response.json();
       console.log("Response from backend:", data);
-      setspecies(data?.species);
     } catch (error) {
       console.error("Error submitting data:", error);
     }
@@ -53,7 +53,6 @@ const FishForm = () => {
         <button type="submit" className="submit-btn">
           Submit
         </button>
-        <label className="species">{species}</label>
       </form>
     </div>
   );
