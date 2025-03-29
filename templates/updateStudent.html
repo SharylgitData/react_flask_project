@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: top;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        flex-direction: column;
+        
+    }
+     form {
+            
+            padding: 30px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            min-width: 320px;
+        }
+
+</style>
+<body>
+    <h2>Update the record for student Id- {{data[0]}}</h2>
+    <form action="/update" method="post">
+        
+        <p>First Name:</p><input type="text" name="fname" value="{{data[1]}}"/>
+        <p>Last Name:</p><input type="text" name="lname"  value="{{data[2]}}"/>
+        <p>Date of Birth:</p><input type="date" name="dob" value="{{data[3]}}" />
+        <p>Amount Due:</p><input type="text" name="adue"  value="{{data[4]}}"/>
+        <input type="submit" value="Update" />
+        <input type="hidden" name="sid" value="{{data[0]}}"></input>
+    </form>
+</body>
+
+</html>

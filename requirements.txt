@@ -2,3 +2,4 @@ pandas
 scikit-learn
 flask
 flask_cors
+psycopg2-binary==2.9.5

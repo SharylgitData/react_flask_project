@@ -29,13 +29,6 @@ def predict():
         return jsonify({"species": species_name})
     except Exception as e:
         return jsonify({"error": str(e)})
-    
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-# when default venv then 'exec zsh'
